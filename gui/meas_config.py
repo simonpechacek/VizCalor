@@ -215,7 +215,11 @@ class DeviceConfigOverlay(QtWidgets.QWidget):
         self.refresh_slider.setValue(1)
     
     def load_config(self, config:dict, sensors=[]):
-        self.calibrations = config.get("calibrations", {})
+        self.calibrations:dict = config.get("calibrations", {})
+        #print(self.calibrations)
+        names = list(self.calibrations.keys())
+        for name in names:
+            self.calibration_list.addItem(name)
         self.update_ain_calibration_list()
         self.update_ain_sensor_list(sensors)
         
@@ -276,6 +280,7 @@ class DeviceConfigOverlay(QtWidgets.QWidget):
             calibration_combo.addItems(names)
             if current in names:
                 calibration_combo.setCurrentText(current)
+
     
     def update_ain_sensor_list(self, sensor_names):
         for checkbox, combo, calibration_combo in self.ain_controls:

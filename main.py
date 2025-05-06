@@ -460,6 +460,8 @@ class SensorManager(QtWidgets.QMainWindow):
     def start_test(self):
         QtCore.QTimer.singleShot(100, self._start_test_internal)
     
+    def channel_map(self):
+        pass
     
     def _prepare_data_source(self):
         """

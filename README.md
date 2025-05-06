@@ -32,6 +32,10 @@ Provides a native support for DAQ tools (currently only supporting LabJack T7).
 ![Model Loading](imgs/Calibrator.gif)
 
 
+### Finally - 3D and 2D Temperature Visualization
+
+![Model Loading](imgs/temp_vis.gif)
+
 ## Installation
 
 Currently in the form of python program. After cloning this repo:
