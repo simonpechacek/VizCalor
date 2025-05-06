@@ -41,7 +41,7 @@ Provides a native support for DAQ tools (currently only supporting LabJack T7).
 Currently in the form of python program. After cloning this repo:
 
 ```zsh
-python -m vizcalor
+python -m venv vizcalor
 source vizcalor/bin/activate
 pip install -r requirements.txt
 ```
